@@ -4,81 +4,90 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%; /* #FFFFFF Crisp White */
+    --foreground: 223 45% 14%; /* #131B33 Near-black for Typography */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 223 45% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 223 45% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 196 100% 44%; /* #00A8E1 Vibrant Sky Blue */
+    --primary-foreground: 223 45% 14%; /* #131B33 for contrast on primary */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 213 100% 35%; /* #0051B4 Professional Medium Blue */
+    --secondary-foreground: 0 0% 100%; /* White for contrast on secondary */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%; /* Kept existing light grey for muted */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Kept existing */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 196 100% 44%; /* #00A8E1 for accents, same as primary */
+    --accent-foreground: 223 45% 14%; /* #131B33 for contrast on accent */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Kept existing */
+    --destructive-foreground: 210 40% 98%; /* Kept existing */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%; /* Kept existing light grey for borders */
+    --input: 214.3 31.8% 91.4%; /* Kept existing light grey for input borders */
+    --ring: 213 100% 35%; /* #0051B4 Professional Medium Blue for focus rings */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* 8px, aligns with "4-8px" spec */
 
+    /* Custom brand blues */
+    --professional-medium-blue: 213 100% 35%; /* #0051B4 */
+    --deep-corporate-blue: 212 100% 23%; /* #003974 */
+    --authoritative-dark-blue: 224 100% 31%; /* #001887 */
+
+    /* Typography */
+    --font-sans: "Inter", "Roboto", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    /* Sidebar variables - kept as is, can be updated in a follow-up */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 223 45% 14%; /* Inverted: Near-black */
+    --foreground: 0 0% 100%; /* Inverted: White */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 223 45% 14%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 223 45% 14%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 196 100% 44%; /* #00A8E1 - kept same vibrant blue */
+    --primary-foreground: 223 45% 14%; /* #131B33 - for contrast on primary */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 213 100% 35%; /* #0051B4 - kept same medium blue */
+    --secondary-foreground: 0 0% 100%; /* White - for contrast on secondary */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217.2 32.6% 17.5%; /* Kept existing dark muted */
+    --muted-foreground: 215 20.2% 65.1%; /* Kept existing dark muted foreground */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 196 100% 44%; /* #00A8E1 - kept same vibrant blue */
+    --accent-foreground: 223 45% 14%; /* #131B33 - for contrast on accent */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%; /* Kept existing */
+    --destructive-foreground: 210 40% 98%; /* Kept existing */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217.2 32.6% 17.5%; /* Kept existing dark border */
+    --input: 217.2 32.6% 17.5%; /* Kept existing dark input border */
+    --ring: 213 100% 35%; /* #0051B4 - kept same for focus ring */
+
+    /* Custom brand blues for dark mode - kept same, adjust if needed for dark bg */
+    --professional-medium-blue: 213 100% 35%;
+    --deep-corporate-blue: 212 100% 23%;
+    --authoritative-dark-blue: 224 100% 31%;
+
+    /* Sidebar variables for dark mode - kept as is */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +106,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply new font family */
   }
 }
